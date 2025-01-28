@@ -1,8 +1,8 @@
 # Name: Sothea Sorn, Amy Igarashi, Akshar Mehta
 # Date: 1/27/25
-# Description: This program takes user input to guess the location of the queen in a set of three cards.
-# The player also bets an amount out of $100 on their guess. The player can continue to play rounds until they run
-# out of money to bet or they quit the program.
+""" Description: This module runs in the terminal and takes user inputs to guess the location of the queen in a set of three cards.
+The player also bets an amount out of $100 on their guess. The player can continue to play rounds until they run
+out of money to bet or they quit the program. The module uses the check_input module to verify inputs. """
 import random
 import check_input
 
