@@ -13,7 +13,7 @@ def main():
     # Initialize user's money
     money = 100
 
-    # Game loops until player runs out of money to bet
+    # Loop game until player runs out of money to bet
     while money > 0:
         print(f"You have ${money}.")
 
@@ -30,7 +30,7 @@ def main():
         print("+-----+ +-----+ +-----+")
 
         # Get user's guess
-        guess = check_input.get_int_range("Find the queen (1, 2, or 3): ", 1, 3)
+        guess = check_input.get_int_range("Guess the queen's position (1, 2, or 3): ", 1, 3)
 
         # Reveal the cards
         print("+-----+ +-----+ +-----+")
@@ -44,19 +44,19 @@ def main():
 
         # Check if user guessed correctly
         if guess == queen_position:
-            print("You got lucky this time...")
             money += bet
+            print(f"You won this round! {bet} has been added to"
+                  + f" your money. You now have ${money}.")
         else:
             print("Sorry... you lose.")
             money -= bet
 
         # Check if user wants to play again
         if money > 0:
-            if not check_input.get_yes_no("Play again? (Y/N): "):
+            if not check_input.get_yes_no("Another round? (Y/N): "):
                 break
 
-    print("You're out of money. Beat it, loser!")
-
+    print("You have no money left! :'( ... Game Over! ")
 
 if __name__ == "__main__":
     main()
